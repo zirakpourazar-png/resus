@@ -1,5 +1,5 @@
 /* Resus — service worker: çevrimdışı çalışma için önbellek. Yalnız "vk-" önekli kendi önbelleklerine dokunur. */
-const CACHE = 'vk-2.2.0-deneme-a52ab359fa';
+const CACHE = 'vk-2.2.0-deneme-edf9103199';
 const FILES = ["./", "./index.html", "./manifest.webmanifest", "./icons/apple-touch-icon.png", "./icons/icon-192.png", "./icons/icon-32.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png"];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(f => new Request(f, { cache: 'reload' })))));
